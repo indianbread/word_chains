@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata_word_chains", "kata_word_chains\kata_word_chains.csproj", "{3285A52A-33B9-47F7-87E5-86D6BD80C70A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata_word_chains_tests", "kata_word_chains_tests\kata_word_chains_tests.csproj", "{E3F08A7D-E8BC-451B-A5B6-43F195F28D25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3285A52A-33B9-47F7-87E5-86D6BD80C70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3285A52A-33B9-47F7-87E5-86D6BD80C70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3285A52A-33B9-47F7-87E5-86D6BD80C70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3285A52A-33B9-47F7-87E5-86D6BD80C70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F08A7D-E8BC-451B-A5B6-43F195F28D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F08A7D-E8BC-451B-A5B6-43F195F28D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F08A7D-E8BC-451B-A5B6-43F195F28D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F08A7D-E8BC-451B-A5B6-43F195F28D25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8C94AE1-F0B8-4272-83B4-459D10F1290E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.csprojAssemblyReference.cache
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.AssemblyInfoInputs.cache
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.AssemblyInfo.cs
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.csproj.CoreCompileInputs.cache
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/bin/Debug/netcoreapp3.1/kata_word_chains.deps.json
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/bin/Debug/netcoreapp3.1/kata_word_chains.runtimeconfig.json
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/bin/Debug/netcoreapp3.1/kata_word_chains.runtimeconfig.dev.json
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/bin/Debug/netcoreapp3.1/kata_word_chains.dll
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/bin/Debug/netcoreapp3.1/kata_word_chains.pdb
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.dll
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.pdb
+/Users/nhandang/Code/exercises/word chains kata/kata_word_chains/kata_word_chains/obj/Debug/netcoreapp3.1/kata_word_chains.genruntimeconfig.cache
