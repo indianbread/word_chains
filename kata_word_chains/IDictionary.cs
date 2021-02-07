@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace kata_word_chains
 {
     public interface IDictionary
@@ -6,7 +8,7 @@ namespace kata_word_chains
 
         bool WordIsValid(string word);
 
-        string GetValidWord(string startingWord, string endingWord, int indexOfLetterToReplace);
+        IEnumerable<string> GetPossibleNextWords(string startingWord, string endingWord, int indexOfLetterToReplace);
 
     }
 }

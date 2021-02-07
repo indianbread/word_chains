@@ -7,9 +7,9 @@ using System.Linq;
 
 namespace kata_word_chains
 {
-    public class Dictionary
+    public class Dictionary : IDictionary
     {
-        public Dictionary(string filePath)
+        public Dictionary(string filePath) 
         {
             _filePath = filePath;
             LoadWords();
@@ -18,9 +18,48 @@ namespace kata_word_chains
         private string[] _validWords;
         private readonly string _filePath;
 
-        public void LoadWords()
+        public bool WordIsValid(string word)
         {
-            //var filePath = "./data/words_alpha.txt";
+            return _validWords.Contains(word);
+        }
+
+        public IEnumerable<string> GetPossibleNextWords(string startingWord, string endingWord, int indexOfLetterToReplace)
+        {
+            var wordLength = startingWord.Length;
+            SplitWord(startingWord, indexOfLetterToReplace, wordLength, out string firstChunk, out string secondChunk);
+            return GetBestNextWord(startingWord, indexOfLetterToReplace, wordLength, firstChunk, secondChunk);
+
+        }
+
+        private IEnumerable<string> GetBestNextWord(string startingWord, int indexOfLetterToReplace, int wordLength, string firstChunk, string secondChunk)
+        {
+            var possibleWords = _validWords.Where(word => word.Length == startingWord.Length && word != startingWord);
+            var firstChunkMatches = possibleWords.Where(word => word.Substring(0, firstChunk.Length) == firstChunk && word != startingWord).ToArray();
+            var firstAndSecondChunkMatches = firstChunkMatches.Where(word => word.Substring(indexOfLetterToReplace + 1, (wordLength - firstChunk.Length - 1)) == secondChunk && word != startingWord);
+            if (possibleWords.Any())
+            {
+                if (firstAndSecondChunkMatches.Any())
+                {
+                    return firstAndSecondChunkMatches;
+                }
+                if (firstChunkMatches.Any())
+                {
+                    return firstChunkMatches;
+                }
+
+            }
+
+            return possibleWords;
+        }
+
+        private static void SplitWord(string startingWord, int indexOfLetterToReplace, int wordLength, out string firstChunk, out string secondChunk)
+        {
+            firstChunk = startingWord.Substring(0, indexOfLetterToReplace);
+            secondChunk = startingWord.Substring(indexOfLetterToReplace + 1, (wordLength - firstChunk.Length - 1));
+        }
+
+        private void LoadWords()
+        {
             try
             {
                 _validWords = File.ReadAllLines(_filePath);
@@ -30,37 +69,6 @@ namespace kata_word_chains
                 Console.WriteLine("Error reading file" + ex.Message);
             }
 
-        }
-
-        public bool WordIsValid(string word)
-        {
-            return _validWords.Contains(word);
-        }
-
-        public string GetNextWord(string startingWord, string endingWord, int indexOfLetterToReplace)
-        {
-            var wordLength = startingWord.Length;
-            var letters = startingWord.Split("");
-            var firstChunk = startingWord.Substring(0, indexOfLetterToReplace);
-            var secondChunk = startingWord.Substring(indexOfLetterToReplace + 1, (wordLength - firstChunk.Length - 1));
-            var possibleWords = _validWords.Where(word => word.Length == startingWord.Length);
-            var firstChunkMatches = possibleWords.Where(word => word.Substring(0, firstChunk.Length) == firstChunk);
-            var secondChunkMatches = firstChunkMatches.Where(word => word.Substring(indexOfLetterToReplace + 1, (wordLength - firstChunk.Length - 1)) == secondChunk).ToArray();
-            string randomWord = null;
-            for (int i = 0; i < secondChunkMatches.Count(); i++)
-            {
-                var word = secondChunkMatches[i];
-                var lettersInWord = word.ToCharArray();
-                var letterReplacement = lettersInWord[indexOfLetterToReplace];
-                if (endingWord.Contains(letterReplacement))
-                {
-                    randomWord = word;
-                    return randomWord;
-                }
-
-            }
-
-            return randomWord;
         }
 
     }

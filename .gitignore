@@ -589,3 +589,5 @@ fabric.properties
 # Ionide (cross platform F# VS Code tools) working folder
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,rider,visualstudio
+
+./*/obj
