@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using kata_word_chains;
 using Xunit;
 
@@ -17,12 +18,13 @@ namespace kata_word_chains_tests
 
         [Theory]
         [InlineData("cat", "dog", new string[] { "cat", "cot", "cog", "dog" })]
+        [InlineData("ruby", "code", new string[] { "ruby", "rubs", "robs", "rods", "rode", "code" })]
         public void ShouldGenerateAWordChain_GivenStartingAndEndingWord(string startingWord, string endingWord, string[] expectedWordChain)
         {
             var wordChain = new WordChain(_dictionary, startingWord, endingWord);
-            var actualWordChain = wordChain.Create(5);
+            var actualWordChain = wordChain.Create(1);
 
-            Assert.Equal(expectedWordChain.ToString(), actualWordChain.ToString());
+            Assert.Equal(expectedWordChain.ToList().ToString(), actualWordChain.ToString());
 
         }
 

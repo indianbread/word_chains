@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/csharp,rider,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=csharp,rider,visualstudio
+# Created by https://www.toptal.com/developers/gitignore/api/csharp,rider,visualstudio,vscode,dotnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=csharp,rider,visualstudio,vscode,dotnetcore
 
 ### Csharp ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -357,6 +357,15 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
 ### Rider ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -429,6 +438,14 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 ### VisualStudio ###
 
@@ -588,6 +605,4 @@ fabric.properties
 
 # Ionide (cross platform F# VS Code tools) working folder
 
-# End of https://www.toptal.com/developers/gitignore/api/csharp,rider,visualstudio
-
-./*/obj
+# End of https://www.toptal.com/developers/gitignore/api/csharp,rider,visualstudio,vscode,dotnetcore
